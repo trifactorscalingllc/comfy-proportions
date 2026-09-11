@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2026-09-11)
+
+- line-breaks rule 3: sentence blocks only for exactly two sentences; three or more flow.
+
 ## 0.1.1 (2026-09-11)
 
 - references/line-breaks.md: balance, pretty, measure, sentence blocks, last-word glue.

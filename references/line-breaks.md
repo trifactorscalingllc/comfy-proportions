@@ -25,10 +25,14 @@ measure.
 
 ## 3. Break where the sentence breaks
 
-When a description is two sentences, the natural break is the full stop. Split it into two blocks
-(`<span style="display:block">` per sentence) so the second sentence starts its own line at every
-width. Never let a sentence break mid-thought when a full stop is available. The site's `Lines`
-helper does exactly this; the rule is the same in any framework: split on `(?<=[.!?])\s+`.
+When a description is exactly two sentences, the natural break is the full stop. Split it into two
+blocks (`<span style="display:block">` per sentence) so the second sentence starts its own line at
+every width. Do not do this for three or more sentences: a stack of one-line sentences reads as a
+list, not a paragraph, and a short middle sentence ends up alone ("We read every application
+ourselves."). With three or more, let the paragraph flow under rule 1 and rule 4, or cut it to two.
+The rule is the same in any framework: split on `(?<=[.!?])\s+` only when the split yields two
+parts. A forced break inside one sentence is a copy decision, not a rule: place it where the
+sentence turns ("What we build, what we run, and / what lands on your side at each step.").
 
 ## 4. Glue the last two words
 
