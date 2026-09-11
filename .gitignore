@@ -1,0 +1,14 @@
+# audit output (screenshots and reports written by scripts/audit.mjs)
+comfy-audit/
+
+# a local Playwright install, if you add one next to the skill
+node_modules/
+package-lock.json
+
+# OS and editor noise
+.DS_Store
+.idea/
+.vscode/
+
+# local Claude Code settings
+.claude/settings.local.json

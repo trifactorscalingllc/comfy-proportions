@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comfy Proportions example</title>
+  <link rel="stylesheet" href="comfy.css">
+  <style>
+    /* page-only styling; everything structural comes from comfy.css */
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .logo-mark { width: 100%; height: auto; }
+    .hero-inner { text-align: center; align-items: center; display: flex; flex-direction: column; }
+    .hero-inner .h2, .hero-inner .measure { margin-left: auto; margin-right: auto; }
+    .stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5em; margin: 2em 0; }
+    .stat-label { display: block; font-size: 0.7em; color: var(--muted); }
+    .band { background: rgba(0, 0, 0, 0.04); }
+    .comfy.dark .band { background: rgba(255, 255, 255, 0.04); }
+    .card h3 { margin-bottom: 0.5em; }
+    .footer { background: #000; color: #fff; }
+    .footer .footer-link, .footer .footer-heading { color: #fff; }
+    .footer-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4em; }
+    .footer-text { flex: 0 1 27.5em; max-width: 27.5em; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 2em; margin-top: 2em; flex-wrap: wrap; }
+    .footer-bottom .small { opacity: 0.6; }
+  </style>
+</head>
+<body class="comfy">
+
+  <header class="nav wrap">
+    <a class="nav-logo" href="#" aria-label="Home">
+      <svg class="logo-mark" viewBox="0 0 110 26" role="img" aria-hidden="true">
+        <rect x="0" y="0" width="26" height="26" rx="6" fill="currentColor"/>
+        <text x="34" y="19" font-size="18" font-weight="600" fill="currentColor" font-family="system-ui, sans-serif">Comfy</text>
+      </svg>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#work">Work</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn nav-cta" href="#book">Book a call <span class="btn-icon" aria-hidden="true">&rarr;</span></a>
+
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-panel">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+  </header>
+
+  <div class="menu-panel" id="menu-panel" data-open="false">
+    <nav aria-label="Primary, collapsed">
+      <a class="nav-link" href="#work">Work</a><br>
+      <a class="nav-link" href="#services">Services</a><br>
+      <a class="nav-link" href="#about">About</a><br>
+      <a class="nav-link" href="#book">Book a call</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero wrap" data-hero>
+      <div class="hero-inner">
+        <span class="eyebrow">Responsive by proportion</span>
+        <h1 class="h1">Every size on this page is a multiple of one number.</h1>
+        <p class="lead measure">Resize the window. The headings, the gutters, the cards and the buttons all change together. Nothing drifts, nothing wraps, and the menu takes over at 991px.</p>
+        <div class="stats">
+          <div><span class="stat">2</span><span class="stat-label">breakpoints</span></div>
+          <div><span class="stat">4/2/1</span><span class="stat-label">grid split</span></div>
+          <div><span class="stat">16 to 22px</span><span class="stat-label">guarded root</span></div>
+        </div>
+        <a class="btn" href="#book">See the method <span class="btn-icon" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </section>
+
+    <section class="section wrap" id="work">
+      <span class="eyebrow">Four up</span>
+      <h2 class="h2">A four-column grid goes to two, then one.</h2>
+      <div class="grid-4" style="margin-top: 3em">
+        <div class="card"><h3 class="h3">Measure</h3><p>Run the audit before you touch anything.</p></div>
+        <div class="card"><h3 class="h3">Set the root</h3><p>One guarded fluid value on the wrapper.</p></div>
+        <div class="card"><h3 class="h3">Convert to em</h3><p>Type, padding, gaps, radii, widths.</p></div>
+        <div class="card"><h3 class="h3">Re-measure</h3><p>The ratios should be constant.</p></div>
+      </div>
+    </section>
+
+    <section class="section wrap band" id="services">
+      <span class="eyebrow">Three up</span>
+      <h2 class="h2">A three-column grid goes to two, then one.</h2>
+      <div class="grid-3" style="margin-top: 3em">
+        <div class="card"><h3 class="h3">Fluid grids</h3><p>Columns in fractions, media at max-width 100 percent.</p></div>
+        <div class="card"><h3 class="h3">Priority+</h3><p>Show what fits, tuck the rest behind a control.</p></div>
+        <div class="card"><h3 class="h3">Disclosure</h3><p>Small print first, the call to action never.</p></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <div class="grid-2" style="align-items: center; gap: 3em">
+        <div>
+          <span class="eyebrow">Two up</span>
+          <h2 class="h2">A two-column block goes straight to one.</h2>
+          <p class="lead">Text on the left, media on the right, until the collapse. Then the media stacks under the text.</p>
+        </div>
+        <div class="card" style="aspect-ratio: 4 / 3"></div>
+      </div>
+    </section>
+
+    <section class="section wrap band" id="book">
+      <div class="hero-inner">
+        <h2 class="h2">Ready when you are.</h2>
+        <p class="lead measure">The primary call to action stays on screen at every width.</p>
+        <a class="btn" href="#" style="margin-top: 1em">Book a call <span class="btn-icon" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section wrap">
+    <div class="footer-top">
+      <div class="footer-text">
+        <p class="lead">One root, everything in em, two breakpoints.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-heading">Method</p>
+          <a class="footer-link" href="#">Principles</a>
+          <a class="footer-link" href="#">Teardown</a>
+          <a class="footer-link" href="#">Audit</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Patterns</p>
+          <a class="footer-link" href="#">Priority+ navigation</a>
+          <a class="footer-link" href="#">Progressive disclosure</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading">Company</p>
+          <a class="footer-link" href="#">About</a>
+          <a class="footer-link" href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="footer-bottom">
+      <span class="small">Comfy Proportions example page</span>
+      <span class="small hide-narrow">MIT licensed</span>
+    </div>
+  </footer>
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+
+  <script>
+    (function () {
+      var root = document.querySelector('.comfy');
+      var toggle = document.getElementById('themeToggle');
+      var saved = null;
+      try { saved = localStorage.getItem('darkMode'); } catch (e) { saved = null; }
+      var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'true' || (saved === null && prefers)) root.classList.add('dark');
+      toggle.addEventListener('click', function () {
+        root.classList.toggle('dark');
+        try { localStorage.setItem('darkMode', root.classList.contains('dark')); } catch (e) { /* private mode */ }
+      });
+    })();
+
+    (function () {
+      var btn = document.querySelector('.menu-btn');
+      var panel = document.getElementById(btn.getAttribute('aria-controls'));
+      function setOpen(open) {
+        btn.setAttribute('aria-expanded', String(open));
+        panel.dataset.open = String(open);
+        document.body.classList.toggle('menu-open', open);
+        if (!open) btn.focus();
+      }
+      btn.addEventListener('click', function () {
+        setOpen(btn.getAttribute('aria-expanded') !== 'true');
+      });
+      panel.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setOpen(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') setOpen(false);
+      });
+      window.matchMedia('(min-width: 992px)').addEventListener('change', function (e) {
+        if (e.matches) setOpen(false);
+      });
+    })();
+  </script>
+</body>
+</html>
