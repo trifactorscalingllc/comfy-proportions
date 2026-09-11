@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2026-09-11)
+
+- references/line-breaks.md: balance, pretty, measure, sentence blocks, last-word glue.
+- templates/comfy.css: the line-break rules.
+
+
 All notable changes to Comfy Proportions are recorded here.
 
 ## [0.1.0] 2026-09-11

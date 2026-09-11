@@ -98,3 +98,7 @@ Read the table like this:
 - A pure `vw` root (the studied site's raw form) ignores user font-size settings and browser zoom, and grows without limit. The guarded form fixes all three. Say so if a user asks why not just `1.25vw`.
 - To honour the user's font-size setting, put the floor and intercept in rem: `clamp(1rem, 0.725rem + 0.446vw, 1.375rem)`.
 - With one proportion above the collapse, a wrap at 992px is a wrap at 1920px. Fix the em value, not the width.
+
+## Line breaks
+
+A lone word on the last line of a description is a layout bug, not a copy bug. `text-wrap: balance` on headings and ledes, `text-wrap: pretty` on paragraphs, a measure in `ch` on the text itself, a block per sentence, and a non-breaking space before the last word. Rules and checks in `references/line-breaks.md`.

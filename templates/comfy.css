@@ -578,3 +578,9 @@
     if (e.matches) setOpen(false);
   });
 */
+
+/* Line breaks that read well (references/line-breaks.md) */
+.comfy h1, .comfy h2, .comfy h3, .comfy .lede { text-wrap: balance; }
+.comfy p, .comfy li, .comfy figcaption { text-wrap: pretty; }
+.comfy .lede { max-width: 48ch; }
+.comfy p { max-width: 68ch; }
